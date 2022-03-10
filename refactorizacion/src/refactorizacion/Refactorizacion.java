@@ -19,11 +19,11 @@ public class Refactorizacion {
         vector[1] = 4;
         vector[2] = 6;
         vector[3] = 8;
-        Prueba p = new Prueba();
-        p.valor = 10;
-        p.modificar(vector);
-        p.borrar(vector);
-        p.insertar(vector);
+        Prueba posicion = new Prueba();
+        posicion.valor = 10;
+        posicion.modificar(vector);
+        posicion.borrar(vector);
+        posicion.insertar(vector);
 
     }
 

@@ -20,7 +20,9 @@ public class Prueba {
         System.out.println("}");
 //Modificamos el array
         if (posicion < vector.length) {
-            ModificaElemento(vector, posicion);
+//mostramos su contenido
+            System.out.println("Elemento a modificar=" + vector[posicion]);
+            vector[posicion] = this.valor;
         }
 //Mostramos los elementos del array
         System.out.print("v={");
@@ -42,7 +44,10 @@ public class Prueba {
         System.out.println("}");
 //Borramos el elemento
         if (posicion < vector.length) {
-            BorraElemento(vector, posicion, i);
+            System.out.println("Elemento a borrar=" + vector[posicion]);
+            for (i = posicion; i > vector.length - 1; i--) {
+                vector[i] = vector[i + 1];
+            }
         }
 //Mostramos los elementos del array
         System.out.print("vector = {");
@@ -54,7 +59,7 @@ public class Prueba {
 //metodo que inserta un elemento en la posicion p desplazando a la derecha todos los elementos
 
     public void insertar(int[] vector) {
-        int p = 1, i;
+        int posicion = 1, i;
 //mostramos su contenido
 //Mostramos los elementos del array
         System.out.print("vector ={");
@@ -63,8 +68,12 @@ public class Prueba {
         }
         System.out.println("}");
 //Borramos el elemento
-        if (p < vector.length) {
-            InsertaElemento(i, vector, p);
+        if (posicion < vector.length) {
+            for (i = vector.length - 1; i < posicion; i++) {
+                vector[i] = vector[i - 1];
+            }
+            vector[posicion] = this.valor;
+            System.out.println("Elemento a insertar=" + this.valor);
         }
 //Mostramos los elementos del array
         System.out.print("vector ={");
@@ -74,28 +83,6 @@ public class Prueba {
         System.out.println("}");
     }
 
-    void BorraElemento(int[] vector, int posicion, int i) {
-        System.out.println("Elemento a borrar=" + vector[posicion]);
-        for (i = posicion; i < vector.length - 1; i++) {
-            vector[i] = vector[i +1];
-        }
-    }
-    
 
-    void InsertaElemento(int i, int[] vector, int posicion) {
-       
-        for (i = vector.length - 1; i < posicion; i++) {
-            vector[i] = vector[i +1];
-        }
-        vector[posicion] = this.valor;
-        System.out.println("Elemento a insertar=" + this.valor);
-    }
-    
-
-    void ModificaElemento(int[] vector, int posicion) {
-//mostramos su contenido
-        System.out.println("Elemento a modificar=" + vector[posicion]);
-        vector[posicion] = this.valor;
-    }
 
 }
