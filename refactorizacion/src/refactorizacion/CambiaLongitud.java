@@ -4,7 +4,7 @@ package refactorizacion;
  *
  * @author Lucía
  */
-public class Prueba {
+public class CambiaLongitud {
     
   
     private int valor;
