@@ -10,10 +10,9 @@ public class Prueba {
     public int valor;
 //metodo que modifica el contenido de la posicion p de un array con el valor pasado
 
-    public void modificar(int[] vector, int longitudActual) {
+    public void modificar(int[] vector, int longitudActual, int posicion) {
         int longitud = vector.length;
         int i;
-        int posicion = 1;
 //Mostramos los elementos del array
         System.out.print("v={");
         for (i = 0; i < longitud; i++) {
@@ -37,8 +36,8 @@ public class Prueba {
 //metodo que borra el elemento de la posicion p desplazando a la izquierda todos los elementos
     
 
-    public void borrar(int[] vector, int longitudActual) {
-        int posicion = 1, i;
+    public void borrar(int[] vector, int longitudActual, int posicion) {
+        int i;
 //mostramos su contenido
 //Mostramos los elementos del array
         System.out.print("vector = {");
@@ -67,11 +66,11 @@ public class Prueba {
         System.out.println("}");
     }
 
-    public void insertar(int[] vector, int longitudActual) {
-        int posicion = 1, i;
+    public void insertar(int[] vector, int longitudActual, int posicion) {
+        int i;
 //mostramos su contenido
 //Mostramos los elementos del array
-    int longitud = vector.length;
+        int longitud = vector.length;
         System.out.print("vector ={");
         
         for (i = 0; i < longitud; i++) {
