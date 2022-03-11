@@ -54,21 +54,26 @@ public class Prueba {
                 vector[i] = vector[i + 1];
             }
         }
-//Mostramos los elementos del array
+        visualizar(longitud, vector);
+    }
+//metodo que inserta un elemento en la posicion p desplazando a la derecha todos los elementos
+
+    public void visualizar(int longitud, int[] vector) {
+        //Mostramos los elementos del array
         System.out.print("vector = {");
-        for (i = 0; i < longitud; i++) {
+        for (int i = 0; i < longitud; i++) {
             System.out.print(vector[i] + ",");
         }
         System.out.println("}");
     }
-//metodo que inserta un elemento en la posicion p desplazando a la derecha todos los elementos
 
     public void insertar(int[] vector, int longitudActual) {
         int posicion = 1, i;
 //mostramos su contenido
 //Mostramos los elementos del array
+    int longitud = vector.length;
         System.out.print("vector ={");
-        int longitud = vector.length;
+        
         for (i = 0; i < longitud; i++) {
             System.out.print(vector[i] + ",");
         }
@@ -88,7 +93,9 @@ public class Prueba {
         }
         System.out.println("}");
     }
-
+    
+    
+    
 
 
 }
