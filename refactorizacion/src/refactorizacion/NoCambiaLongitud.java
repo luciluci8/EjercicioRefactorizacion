@@ -4,7 +4,7 @@ package refactorizacion;
  *
  * @author Lucía
  */
-public class NoCambiaLongitud {
+public class NoCambiaLongitud extends Vector{
     
   
     private int valor;
